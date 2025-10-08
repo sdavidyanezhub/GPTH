@@ -1,0 +1,121 @@
+/* Variables de Color (Reutilizando el Dorado del Logo) */
+:root {
+    --color-black: #121212;         /* Negro estandar (dark mode base) */
+    --color-white: #FFFFFF;         /* Blanco limpio */
+    --color-gold: #D4AF37;          /* Dorado Metálico (Acento principal) */
+    --color-text: #E0E0E0;          /* Texto en campos y labels (para contraste limpio) */
+    --color-input-bg: #2C2C2C;      /* Fondo de campos un poco más claro que el fondo */
+    --color-placeholder: #888888;
+}
+
+/* Base y Contenedor Principal (Fondo Negro Software) */
+.talent-form-clean {
+    font-family: 'Inter', 'Roboto', sans-serif; /* Fuentes limpias y profesionales */
+    background-color: var(--color-black);
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 700px; /* Ancho más compacto */
+    margin: 20px auto;
+    box-shadow: none; /* Eliminamos sombras para un look más flat */
+    color: var(--color-text);
+}
+
+/* Estructura de Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; /* Espaciado más compacto y moderno */
+}
+
+.form-full-width, .form-actions {
+    grid-column: 1 / -1; 
+}
+
+/* Etiquetas (Labels) */
+.form-label {
+    color: var(--color-gold); 
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+/* Inputs y Textareas (Contraste alto) */
+.form-input,
+.form-textarea {
+    background-color: var(--color-input-bg);
+    color: var(--color-white);
+    border: 1px solid var(--color-input-bg); /* Borde sutil del mismo color que el fondo */
+    padding: 10px 12px;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: var(--color-placeholder);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--color-gold); /* Borde dorado limpio y funcional al enfocar */
+    box-shadow: none; /* Eliminamos sombras de enfoque */
+}
+
+.form-textarea {
+    min-height: 100px; /* Altura más funcional */
+    resize: vertical; 
+}
+
+/* Hints */
+.form-hint {
+    font-size: 0.75rem;
+    color: var(--color-placeholder); 
+    margin-top: 5px;
+    text-align: right;
+}
+
+/* Botones de Acción (Alineación eficiente) */
+.form-actions {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Estilos Generales de Botones */
+.btn {
+    padding: 10px 20px;
+    font-weight: 600; 
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s;
+}
+
+/* Botón Primario (Enviar) - La Acción Clara en Dorado */
+.btn-primary-clean {
+    background-color: var(--color-gold);
+    color: var(--color-black); /* Contraste negro sobre dorado */
+}
+
+.btn-primary-clean:hover {
+    background-color: #C19E30; 
+}
+
+/* Botón Secundario (Limpiar) - Minimalista y Sutil */
+.btn-secondary-clean {
+    background-color: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
+}
+
+.btn-secondary-clean:hover {
+    background-color: var(--color-text);
+    color: var(--color-black);
+}
